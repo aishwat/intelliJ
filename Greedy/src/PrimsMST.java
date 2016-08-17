@@ -89,6 +89,7 @@ public class PrimsMST {
 
                     pQueue.add(keys[node.vertice]); //add back
                     //remove add can me made single function by using a visited flag
+                    // instead of actually removing node just mark it as dirty and use polling later
                     //remove_add() in O(lg(n))
                  }
 
