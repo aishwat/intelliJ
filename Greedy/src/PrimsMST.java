@@ -28,6 +28,10 @@ public class PrimsMST {
     public class Graph {
         int V;
         AdjList[] adjLists;
+        //for 3 vertices, something like
+        //[]->[][][]
+        //[]->[][]
+        //[]->[][][][]
     }
 
 
@@ -80,14 +84,14 @@ public class PrimsMST {
             mstSet[u.vertice] = true;
 
             for (Node node : graph.adjLists[u.vertice].nodes) {
+                int v = node.vertice;
+                if (mstSet[v] == false && node.key < keys[v].key) {
+                    pQueue.remove(keys[v]); //remove that node from q
 
-                if (mstSet[node.vertice] == false && node.key < keys[node.vertice].key) {
-                    pQueue.remove(keys[node.vertice]); //remove that node from q
+                    keys[v].key = node.key; //change key
+                    parent[v] = u.vertice;
 
-                    keys[node.vertice].key = node.key; //change key
-                    parent[node.vertice] = u.vertice;
-
-                    pQueue.add(keys[node.vertice]); //add back
+                    pQueue.add(keys[v]); //add back
                     //remove add can me made single function by using a visited flag
                     // instead of actually removing node just mark it as dirty and use polling later
                     //remove_add() in O(lg(n))
@@ -101,7 +105,8 @@ public class PrimsMST {
 
     public void print_mst(Node[] keys, int[] parent, Graph graph) {
         for (int i = 1; i < graph.V; i++) {
-            System.out.println(parent[keys[i].vertice] + "-" + keys[i].vertice + " " +keys[i].key);
+            int v = keys[i].vertice;
+            System.out.println(parent[v] + "-" + v + " " +keys[v].key);
         }
     }
 

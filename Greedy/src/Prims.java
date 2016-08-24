@@ -40,6 +40,9 @@ public class Prims {
             for (int v = 0; v < V; v++) {
                 //adjacent, new val < key, not in mst
                 if (graph[u][v] != 0 && graph[u][v] < key[v] && mstSet[v] == false) {
+//                    if(graph[u][v] != 0 && mstSet[v] == false
+//                      && key[u]!=Integer.MAX_VALUE && key[u]+graph[u][v]<key[v]) - for dijkstra
+//                    key[v] = key[u]+graph[u][v];
                     parent[v] = u;
                     key[v] = graph[u][v];
                 }
@@ -50,7 +53,7 @@ public class Prims {
     }
 
     public static void main(String[] args) {
-        int graph[][]=new int[][] {{0, 2, 0, 6, 0},
+        int graph[][] = new int[][]{{0, 2, 0, 6, 0},
                 {2, 0, 3, 8, 5},
                 {0, 3, 0, 0, 7},
                 {6, 8, 0, 0, 9},
