@@ -56,6 +56,8 @@ public class LCS {
     public static void main(String[] args) {
         String X = "abcdaf";
         String Y = "acbcf";
+//        String X = "agbdba"; //for longest palindromic substring
+//        String Y = "abdbga";
         int[][] L = getLCS(X.toCharArray(), Y.toCharArray());
         printSeq(L, X.toCharArray(), Y.toCharArray());
     }
