@@ -46,16 +46,16 @@ public class MaxSquareSubMatrix {
     }
 
     public static void main(String[] args) {
-//        int a[][] = {{0, 1, 1, 0, 1},
-//                    {1, 1, 0, 1, 0},
-//                    {0, 1, 1, 1, 0},
-//                    {1, 1, 1, 1, 0},
-//                    {1, 1, 1, 1, 1},
-//                    {0, 0, 0, 0, 0}};
+        int a[][] = {{0, 1, 1, 0, 1},
+                    {1, 1, 0, 1, 0},
+                    {0, 1, 1, 1, 0},
+                    {1, 1, 1, 1, 0},
+                    {1, 1, 1, 1, 1},
+                    {0, 0, 0, 0, 0}};
 //        System.out.println(a[0].length);
 //        System.out.println(a.length);
-        int arr[][] = {{0, 0, 1, 1, 1}, {1, 0, 1, 1, 1}, {0, 1, 1, 1, 1}, {1, 0, 1, 1, 1}};
-        getMaxSquareSubMatrix(arr);
+//        int arr[][] = {{0, 0, 1, 1, 1}, {1, 0, 1, 1, 1}, {0, 1, 1, 1, 1}, {1, 0, 1, 1, 1}};
+        getMaxSquareSubMatrix(a);
 
     }
 }
