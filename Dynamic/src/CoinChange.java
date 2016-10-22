@@ -4,6 +4,7 @@ import java.util.Arrays;
 /**
  * Created by tecso on 1/9/16.
  */
+//ways to get given n
 public class CoinChange {
     public static int[][] getCount(int[] S, int n) {
 
