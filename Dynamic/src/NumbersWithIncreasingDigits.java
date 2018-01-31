@@ -5,6 +5,7 @@
 //    1digit = n
 //    2digit = n(n+1)/2
 //    3digit = n(n+1)(n+2)/6
+// for DP sol follow https://www.geeksforgeeks.org/number-n-digits-non-decreasing-integers/
 public class NumbersWithIncreasingDigits {
     public static int getCountOfNondecresingNumbers(int n) {
         int N = 10;
