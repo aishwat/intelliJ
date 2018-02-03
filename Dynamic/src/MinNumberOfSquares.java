@@ -3,6 +3,7 @@
  */
 //Minimum number of squares whose sum equals to given number n
 //https://ideone.com/c3KqCm 2nd method
+//http://www.zrzahid.com/least-number-of-perfect-squares-that-sums-to-n/
 public class MinNumberOfSquares {
     public static int getMinNumberOfSquares(int sum) {
         int T[][] = new int[sum + 1][10];
